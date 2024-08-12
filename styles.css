@@ -1,4 +1,4 @@
-/* Mobile-first CSS */
+/* Mobile-first */
 
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 1.6rem; /* Base font size 16px */
+  font-size: 1.6rem;
   line-height: 1.6;
 }
 
@@ -24,25 +24,16 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Ombre dégradée violette */
+  box-shadow: 0 0 30px rgba(128, 0, 128, 0.5);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.4rem; /* 24px */
+  font-size: 2.4rem;
 }
 
-.photo-header {
+h2 {
   text-align: center;
-  margin: 20px 0;
-}
-
-.photo-header img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Ombre autour de la photo */
 }
 
 nav ul {
@@ -59,33 +50,64 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.4rem; /* 14px */
+  font-size: 1.4rem;
 }
 
 section {
-  padding: 30px 20px;
+  padding: 10px 10px;
 }
 
 section h2 {
-  font-size: 2rem; /* 20px */
+  font-size: 2rem;
   color: white;
-  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Ombre dégradée violette */
+  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8);
+}
+
+#accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.accueil-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accueil-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.photo-accueil {
+  margin-bottom: 20px;
+}
+
+.photo-accueil img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
 }
 
 .projet {
   margin-bottom: 20px;
 }
 
+#projets,
 .skills-container {
-  display: block; /* Stack skills vertically for mobile */
-  padding: 20px;
+  display: block;
   text-align: center;
 }
 
 .skills-container h3 {
-  font-size: 1.8rem; /* 18px */
+  font-size: 1.8rem;
   color: white;
-  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Ombre dégradée violette */
+  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8);
 }
 
 .skills-container ul {
@@ -96,8 +118,8 @@ section h2 {
 
 .skills-container ul li {
   margin-bottom: 10px;
-  font-size: 1.6rem; /* 16px */
-  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Ombre dégradée violette */
+  font-size: 1.6rem;
+  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8);
 }
 
 footer {
@@ -106,64 +128,87 @@ footer {
   text-align: center;
   padding: 10px;
   width: 100%;
-  font-size: 1.4rem; /* 14px */
+  font-size: 1.4rem;
+  box-shadow: 0 0 30px rgba(128, 0, 128, 0.5);
 }
 
-/* Tablette (moyens écrans) */
+/***************************************** TABLETTE **************************************************/
+
 @media (min-width: 768px) {
   html {
     font-size: 65%;
   }
 
   header h1 {
-    font-size: 3rem; /* 30px */
+    font-size: 3rem;
   }
 
   nav ul li a {
-    font-size: 1.6rem; /* 16px */
-  }
-
-  .photo-header img {
-    width: 140px;
-    height: 140px;
-  }
-
-  section {
-    padding: 40px 30px;
+    font-size: 1.6rem;
   }
 
   section h2 {
-    font-size: 2.2rem; /* 22px */
+    font-size: 2.2rem;
+  }
+
+  .photo-accueil {
+    margin-bottom: 0;
+  }
+
+  .photo-accueil img {
+    width: 180px;
+    height: 180px;
+  }
+  #projets.projet {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .skills-container {
-    display: flex; /* Arrange skills side by side */
+    display: flex;
     justify-content: space-around;
     text-align: left;
   }
 
   .skills-container ul li {
-    font-size: 1.8rem; /* 18px */
+    font-size: 1.8rem;
   }
 }
 
-/* Desktop (grands écrans) */
+/***************************************** DESKTOP **************************************************/
+
 @media (min-width: 1024px) {
   html {
     font-size: 70%;
   }
 
   header h1 {
-    font-size: 3.5rem; /* 35px */
+    font-size: 3.5rem;
   }
 
   nav ul li a {
-    font-size: 1.8rem; /* 18px */
+    font-size: 1.8rem;
   }
 
-  .photo-header img {
-    width: 160px;
-    height: 160px;
+  #accueil {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .accueil-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .photo-accueil {
+    margin-left: 20px;
+  }
+
+  .photo-accueil img {
+    width: 210px;
+    height: 210px;
   }
 
   section {
@@ -171,18 +216,18 @@ footer {
   }
 
   section h2 {
-    font-size: 2.4rem; /* 24px */
+    font-size: 2.4rem;
   }
 
   .skills-container h3 {
-    font-size: 2rem; /* 20px */
+    font-size: 2rem;
   }
 
   .skills-container ul li {
-    font-size: 2rem; /* 20px */
+    font-size: 2rem;
   }
 
   footer {
-    font-size: 1.6rem; /* 16px */
+    font-size: 1.6rem;
   }
 }
