@@ -1,0 +1,188 @@
+/* Mobile-first CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem; /* Base font size 16px */
+  line-height: 1.6;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Ombre dégradée violette */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem; /* 24px */
+}
+
+.photo-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.photo-header img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Ombre autour de la photo */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem; /* 14px */
+}
+
+section {
+  padding: 30px 20px;
+}
+
+section h2 {
+  font-size: 2rem; /* 20px */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Ombre dégradée violette */
+}
+
+.projet {
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: block; /* Stack skills vertically for mobile */
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-container h3 {
+  font-size: 1.8rem; /* 18px */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Ombre dégradée violette */
+}
+
+.skills-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.6rem; /* 16px */
+  text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Ombre dégradée violette */
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.4rem; /* 14px */
+}
+
+/* Tablette (moyens écrans) */
+@media (min-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  header h1 {
+    font-size: 3rem; /* 30px */
+  }
+
+  nav ul li a {
+    font-size: 1.6rem; /* 16px */
+  }
+
+  .photo-header img {
+    width: 140px;
+    height: 140px;
+  }
+
+  section {
+    padding: 40px 30px;
+  }
+
+  section h2 {
+    font-size: 2.2rem; /* 22px */
+  }
+
+  .skills-container {
+    display: flex; /* Arrange skills side by side */
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .skills-container ul li {
+    font-size: 1.8rem; /* 18px */
+  }
+}
+
+/* Desktop (grands écrans) */
+@media (min-width: 1024px) {
+  html {
+    font-size: 70%;
+  }
+
+  header h1 {
+    font-size: 3.5rem; /* 35px */
+  }
+
+  nav ul li a {
+    font-size: 1.8rem; /* 18px */
+  }
+
+  .photo-header img {
+    width: 160px;
+    height: 160px;
+  }
+
+  section {
+    padding: 50px 40px;
+  }
+
+  section h2 {
+    font-size: 2.4rem; /* 24px */
+  }
+
+  .skills-container h3 {
+    font-size: 2rem; /* 20px */
+  }
+
+  .skills-container ul li {
+    font-size: 2rem; /* 20px */
+  }
+
+  footer {
+    font-size: 1.6rem; /* 16px */
+  }
+}
