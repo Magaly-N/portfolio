@@ -159,15 +159,21 @@ footer {
     width: 180px;
     height: 180px;
   }
-  #projets.projet {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
+  .projets-container,
   .skills-container {
     display: flex;
     justify-content: space-around;
     text-align: left;
+  }
+
+  .projets-container {
+    flex-wrap: wrap;
+  }
+
+  .projet {
+    width: 300px;
+    height: 100px;
   }
 
   .skills-container ul li {
