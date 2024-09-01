@@ -16,78 +16,92 @@
       <h1>Magaly Nouguerède - Développeuse Web</h1>
       <nav>
         <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#accueil" aria-label="Accueil">Accueil</a></li>
+          <li><a href="#projets" aria-label="Projets">Projets</a></li>
+          <li><a href="#skills" aria-label="Compétences">Compétences</a></li>
+          <li><a href="#contact" aria-label="Contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="accueil">
-      <div class="accueil-content">
-        <div class="photo-accueil">
-          <img src="images/ma_photo.jpg" alt="Ma Photo" />
+    <main>
+      <section id="accueil">
+        <div class="accueil-content">
+          <div class="photo-accueil">
+            <img src="images/ma-photo.webp" alt="Photo de Magaly Nouguerède" />
+          </div>
+          <div class="accueil-text">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>
+              Découvrez mon parcours en tant que développeuse web. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Ducimus illum dolorum
+              molestiae, magnam rerum minus rem doloribus eos asperiores sit
+              exercitationem ad impedit sint voluptas.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="accueil-text">
-        <h2>Bienvenue sur mon portfolio</h2>
-        <p>
-          Informations sur moi en tant que développeur web. Lorem, ipsum dolor
-          sit amet consectetur adipisicing elit. Ducimus illum dolorum
-          molestiae, magnam rerum minus rem doloribus eos asperiores sit
-          exercitationem ad impedit sint voluptas.
-        </p>
-      </div>
-    </section>
+      </section>
 
-    <section id="projets">
-      <h2>Projets</h2>
-      <div class="projets-container">
-        <div class="projet">
-          <h3>Projet 1</h3>
-          <p>Description du projet 1.</p>
+      <section id="projets">
+        <h2>Projets</h2>
+        <div class="projets-container">
+          <div class="projet">
+            <h3>Projet 1</h3>
+            <p>Description du projet 1.</p>
+          </div>
+          <div class="projet">
+            <h3>Projet 2</h3>
+            <p>Description du projet 2.</p>
+          </div>
         </div>
-        <div class="projet">
-          <h3>Projet 2</h3>
-          <p>Description du projet 2.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills">
-      <h2>Compétences</h2>
-      <div class="skills-container">
-        <div class="hard-skills">
-          <h3>Hard Skills</h3>
-          <ul>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>React.js</li>
-            <li>Node.js</li>
-            <li>Base de données SQL</li>
-          </ul>
+      <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills-container">
+          <div class="hard-skills">
+            <h3>Hard Skills</h3>
+            <ul>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Node.js</li>
+              <li>Bases de données SQL</li>
+            </ul>
+          </div>
+          <div class="soft-skills">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Communication</li>
+              <li>Travail en équipe</li>
+              <li>Résolution de problèmes</li>
+              <li>Gestion du temps</li>
+              <li>Adaptabilité</li>
+            </ul>
+          </div>
         </div>
-        <div class="soft-skills">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Communication</li>
-            <li>Travail en équipe</li>
-            <li>Résolution de problèmes</li>
-            <li>Gestion du temps</li>
-            <li>Adaptabilité</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Formulaire de contact ou informations de contact.</p>
-    </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <form action="envoyer_formulaire.php" method="POST">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" required />
+
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
 
     <footer>
-      <p>&copy; 2024 Mon Portfolio</p>
+      <p>&copy; 2024 Magaly Nouguerède - Mon Portfolio</p>
     </footer>
+    <!--<script src="script_exemple.js"></script>-->
   </body>
 </html>
